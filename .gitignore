@@ -1,0 +1,11 @@
+# Секреты
+.env
+*.key
+
+# ZCode служебное (project.yaml и tasks/ — коммитятся)
+.zcode/plans/
+.zcode/workspace/
+
+# Python служебное
+__pycache__/
+*.pyc

@@ -1,0 +1,23 @@
+version: 1
+name: zcode-hub-lite
+type: engineering-hub            # лайт-дистрибутив стандарта для второй машины (Windows)
+description: ZCode Engineering Hub Lite — скиллы, шаблоны, guard и плагины для новичка (Windows, git)
+
+repository:
+  platform: github               # private; создаётся при первом push
+  default_branch: main
+  strategy: github-flow
+
+quality:
+  test: python3 hooks/test_guard.py && python3 hooks/test_winpaths.py
+  lint: null
+
+constraints:
+  - templates/ и skills/ — устанавливаемое содержимое; правки только через задачу
+  - в текстах репо не должно быть абсолютных путей машины-источника (/home/egor) и литералов ~/.zcode — только плейсхолдер <ZCODE_DIR>
+  - plugins/guided-research/ — копия порта 0.1.0; upstream-снапшот и ADR живут в основном хабе it/zcode
+
+ai:
+  allow_shell: controlled
+  allow_git_push: confirm
+  execution_mode: build
