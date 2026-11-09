@@ -1,0 +1,8 @@
+{
+  "name": "guided-research",
+  "version": "0.1.0",
+  "description": "Guided deep research: structured intake dialogue (goal, context, structure, style, sources), multi-round web research, and a sourced .md report. ZCode port of the abbnv/guided-research skill.",
+  "author": { "name": "Engineering Hub" },
+  "skills": "skills",
+  "commands": "commands"
+}

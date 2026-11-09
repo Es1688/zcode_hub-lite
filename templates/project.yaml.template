@@ -1,0 +1,24 @@
+version: 1
+name: <имя-проекта-kebab>          # обязательное
+type: <agent-skill | scientific-python | data-analysis | node-service | google-apps-script | ...>
+description: <одной строкой, что это>
+
+# language: { name: python, version: "3.12" }   # для кодовых проектов
+# runtime: { entry: <файл входа> }
+
+repository:
+  platform: github                  # private; создаётся при первом push
+  default_branch: main
+  strategy: github-flow
+
+quality:
+  test: <как проверять или null>
+  lint: <команда линтера или null>
+
+# constraints:                     # ключевые запреты уровня проекта
+#   - <что нельзя менять/делать>
+
+ai:
+  allow_shell: controlled
+  allow_git_push: confirm
+  execution_mode: build            # plan | build | yolo (политика Hub — §6 техпроекта)

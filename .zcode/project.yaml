@@ -14,8 +14,8 @@ quality:
 
 constraints:
   - templates/ и skills/ — устанавливаемое содержимое; правки только через задачу
-  - в текстах репо не должно быть абсолютных путей машины-источника (/home/egor) и литералов ~/.zcode — только плейсхолдер <ZCODE_DIR>
-  - plugins/guided-research/ — копия порта 0.1.0; upstream-снапшот и ADR живут в основном хабе it/zcode
+  - в устанавливаемых текстах (skills/, templates/, AGENTS-L0.md, hooks/README.md) пути к каталогу конфигурации ZCode — только через плейсхолдер <ZCODE_DIR>; абсолютных путей машины-источника в репо нет (тестовые данные test_*.py и описания дефолтов в коде — исключаются)
+  - plugins/guided-research/ — копия порта 0.1.0; upstream-снапшот и ADR живут в основном хабе (машина-источник)
 
 ai:
   allow_shell: controlled
