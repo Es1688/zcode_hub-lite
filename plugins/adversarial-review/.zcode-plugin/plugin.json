@@ -1,0 +1,9 @@
+{
+  "name": "adversarial-review",
+  "version": "0.1.0",
+  "description": "Adversarial code/plan review with an independent BYOK reviewer subagent. ZCode port of the Claude Code + Codex skill (variant B): the lead fixes, the reviewer challenges, up to 5 rounds.",
+  "author": { "name": "Engineering Hub" },
+  "skills": "skills",
+  "commands": "commands",
+  "agents": "agents"
+}

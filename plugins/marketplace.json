@@ -1,0 +1,21 @@
+{
+  "name": "dev-it-zcode",
+  "plugins": [
+    {
+      "name": "adversarial-review",
+      "source": "./adversarial-review",
+      "version": "0.1.0",
+      "displayName": "Adversarial Review",
+      "description": "Adversarial code/plan review with an independent BYOK reviewer subagent (variant B). Lite copy: rg replaced with grep -E for Git Bash.",
+      "category": "developer-tools"
+    },
+    {
+      "name": "guided-research",
+      "source": "./guided-research",
+      "version": "0.1.0",
+      "displayName": "Guided Research",
+      "description": "Guided deep research: structured intake dialogue, multi-round web research, sourced .md report. No BYOK key required.",
+      "category": "developer-tools"
+    }
+  ]
+}

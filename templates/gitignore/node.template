@@ -1,0 +1,12 @@
+# Node
+node_modules/
+dist/
+build/
+
+# Секреты
+.env
+*.key
+
+# ZCode служебное (project.yaml и tasks/ — коммитятся)
+.zcode/plans/
+.zcode/workspace/

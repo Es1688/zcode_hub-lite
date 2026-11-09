@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Секреты
+.env
+*.key
+
+# Офисные lock-файлы (LibreOffice)
+.~lock.*#
+
+# ZCode служебное (project.yaml и tasks/ — коммитятся)
+.zcode/plans/
+.zcode/workspace/
