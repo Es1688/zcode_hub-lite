@@ -91,7 +91,11 @@ def write_json(path, data, backup):
     tmp = path.with_name(path.name + ".tmp-lite")
     fd = os.open(tmp, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, mode)
     try:
-        os.fchmod(fd, mode)
+        try:
+            os.fchmod(fd, mode)
+        except (AttributeError, NotImplementedError):
+            pass   # fd-based chmod exists on Windows only since Python 3.13;
+                   # on Windows the POSIX mode bits are not meaningful anyway
         os.write(fd, (json.dumps(data, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
     finally:
         os.close(fd)
